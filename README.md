@@ -25,7 +25,7 @@ ___
 
 ### Инструменты использованные в проекте
 
-![Static Badge](https://img.shields.io/badge/jwt-1.3.1-brightgreen?logo=jwt)
+![Static Badge](https://img.shields.io/badge/PyJWT-2.8.0-brightgreen)
 ![Static Badge](https://img.shields.io/badge/fastapi-0.111.0-brightgreen?logo=fastapi&logoColor=white&label=white&color=blue)
 
 ___
