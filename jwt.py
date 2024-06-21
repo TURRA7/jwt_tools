@@ -12,7 +12,7 @@ func:
     с помощью проверки токена
 """
 import jwt
-import datetime
+from datetime import datetime, timezone, timedelta
 from functools import wraps
 from fastapi import HTTPException, Request
 
@@ -34,7 +34,7 @@ def create_jwt_token(login: str, token_lifetime_hours: int,
     # Словарь для приведения в токен (логин+время жизни токена)
     payload = {
         "login": login,
-        "exp": datetime.utcnow() + datetime.timedelta(hours=time_token)
+        "exp": datetime.now(timezone.utc) + timedelta(hours=time_token)
     }
     return jwt.encode(payload, secret_key,
                       algorithm="HS256")  # <- Метод шитфрования
